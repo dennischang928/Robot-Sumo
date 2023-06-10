@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle>
+    <drawing>
+        <grid unitdist="mm" unit="mm"/>
+        <layers>
+            <layer name="Top" color="4" number="1" visible="yes" active="yes" fill="1"/>
+            <layer name="Bottom" color="4" number="16" visible="yes" active="yes" fill="1"/>
+            <layer name="tPlace" color="7" number="21" visible="yes" active="yes" fill="1"/>
+            <layer name="bPlace" color="7" number="22" visible="yes" active="yes" fill="1"/>
+            <layer name="tNames" color="7" number="25" visible="yes" active="yes" fill="1"/>
+            <layer name="bNames" color="7" number="26" visible="yes" active="yes" fill="1"/>
+            <layer name="tValues" color="7" number="27" visible="yes" active="yes" fill="1"/>
+            <layer name="bValues" color="7" number="28" visible="yes" active="yes" fill="1"/>
+            <layer name="tStop" color="7" number="29" visible="yes" active="yes" fill="1"/>
+            <layer name="bStop" color="7" number="30" visible="yes" active="yes" fill="1"/>
+            <layer name="tCream" color="7" number="31" visible="yes" active="yes" fill="1"/>
+            <layer name="bCream" color="7" number="32" visible="yes" active="yes" fill="1"/>
+            <layer name="tKeepout" color="4" number="39" visible="yes" active="yes" fill="1"/>
+            <layer name="bKeepout" color="4" number="40" visible="yes" active="yes" fill="1"/>
+            <layer name="tRestrict" color="0" number="41" visible="yes" active="yes" fill="1"/>
+            <layer name="bRestrict" color="0" number="42" visible="yes" active="yes" fill="1"/>
+            <layer name="tDocu" color="7" number="51" visible="yes" active="yes" fill="1"/>
+            <layer name="bDocu" color="7" number="52" visible="yes" active="yes" fill="1"/>
+            <layer name="Nets" color="2" number="91" visible="yes" active="yes" fill="1"/>
+            <layer name="Busses" color="1" number="92" visible="yes" active="yes" fill="1"/>
+            <layer name="Pins" color="2" number="93" visible="yes" active="yes" fill="1"/>
+            <layer name="Symbols" color="4" number="94" visible="yes" active="yes" fill="1"/>
+            <layer name="Names" color="7" number="95" visible="yes" active="yes" fill="1"/>
+            <layer name="Values" color="7" number="96" visible="yes" active="yes" fill="1"/>
+            <layer name="Info" color="7" number="97" visible="yes" active="yes" fill="1"/>
+            <layer name="Guide" color="6" number="98" visible="yes" active="yes" fill="1"/>
+        </layers>
+        <library name="Upverter Library">
+            <description>Upverter Parts Library
+
+Created by Upverter.com</description>
+            <packages>
+                <package name="NEXPERIA_PESD12VL1BA,115_0">
+                    <description>Low capacitance bidirectional ESD protection diodes in SOD323</description>
+                    <wire layer="51" y2="0.675" width="0.15" x2="-0.9" y1="-0.675" x1="-0.9"/>
+                    <wire layer="51" y2="0.675" width="0.15" x2="0.9" y1="0.675" x1="-0.9"/>
+                    <wire layer="51" y2="-0.675" width="0.15" x2="0.9" y1="0.675" x1="0.9"/>
+                    <wire layer="51" y2="-0.675" width="0.15" x2="-0.9" y1="-0.675" x1="0.9"/>
+                    <wire layer="21" y2="0.675" width="0.15" x2="0.425" y1="0.675" x1="-0.425"/>
+                    <wire layer="21" y2="-0.675" width="0.15" x2="0.425" y1="-0.675" x1="-0.425"/>
+                    <wire layer="39" y2="0.825" width="0.1" x2="-1.525" y1="-0.825" x1="-1.525"/>
+                    <wire layer="39" y2="0.825" width="0.1" x2="1.525" y1="0.825" x1="-1.525"/>
+                    <wire layer="39" y2="-0.825" width="0.1" x2="1.525" y1="0.825" x1="1.525"/>
+                    <wire layer="39" y2="-0.825" width="0.1" x2="-1.525" y1="-0.825" x1="1.525"/>
+                    <text layer="25" align="bottom-left" y="0.975" x="-0.9" rot="R0" size="1.0">&gt;NAME</text>
+                    <smd layer="1" thermals="yes" name="1" stop="yes" roundness="0" dx="0.6" dy="0.6" y="0.0" x="-1.1" rot="R0" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="2" stop="yes" roundness="0" dx="0.6" dy="0.6" y="0.0" x="1.1" rot="R0" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="smd_3" stop="yes" roundness="0" dx="0.5" dy="0.5" y="0.0" x="-1.1" rot="R0" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="smd_4" stop="yes" roundness="0" dx="0.5" dy="0.5" y="0.0" x="1.1" rot="R0" cream="yes"/>
+                </package>
+            </packages>
+            <symbols>
+                <symbol name="NEXPERIA_PESD12VL1BA,115_0_0">
+                    <description>Low capacitance bidirectional ESD protection diodes in SOD323</description>
+                    <wire layer="94" y2="-7.62" width="0.508" x2="12.7" y1="-2.54" x1="12.7"/>
+                    <wire layer="94" y2="-7.62" width="0.508" x2="17.78" y1="-2.54" x1="17.78"/>
+                    <wire layer="94" y2="-5.08" width="0.508" x2="17.78" y1="-2.54" x1="12.7"/>
+                    <wire layer="94" y2="-5.08" width="0.508" x2="17.78" y1="-7.62" x1="12.7"/>
+                    <wire layer="94" y2="-7.62" width="0.508" x2="17.018" y1="-7.62" x1="17.78"/>
+                    <wire layer="94" y2="-7.62" width="0.508" x2="7.62" y1="-2.54" x1="7.62"/>
+                    <wire layer="94" y2="-5.08" width="0.508" x2="2.54" y1="-7.62" x1="7.62"/>
+                    <wire layer="94" y2="-2.54" width="0.508" x2="7.62" y1="-5.08" x1="2.54"/>
+                    <wire layer="94" y2="-2.54" width="0.508" x2="2.54" y1="-7.62" x1="2.54"/>
+                    <wire layer="94" y2="-2.54" width="0.508" x2="3.302" y1="-2.54" x1="2.54"/>
+                    <wire layer="94" y2="-5.08" width="0.508" x2="12.7" y1="-5.08" x1="7.62"/>
+                    <wire layer="94" y2="-5.08" width="0.15" x2="2.54" y1="-5.08" x1="2.54"/>
+                    <wire layer="94" y2="-5.08" width="0.15" x2="17.78" y1="-5.08" x1="17.78"/>
+                    <text layer="95" align="top-left" y="2.794" x="1.016" rot="R0" size="2.54">&gt;NAME</text>
+                    <text layer="95" align="top-left" y="-11.176" x="1.016" rot="R0" size="2.54">PESD12VL1BA,115</text>
+                    <pin direction="pas" name="CATHODE_1" visible="pad" length="middle" y="-5.08" x="-2.54"/>
+                    <pin direction="pas" name="CATHODE_2" visible="pad" length="middle" y="-5.08" x="22.86" rot="R180"/>
+                </symbol>
+            </symbols>
+            <devicesets>
+                <deviceset prefix="D" name="NEXPERIA_PESD12VL1BA,115">
+                    <description>Low capacitance bidirectional ESD protection diodes in SOD323</description>
+                    <gates>
+                        <gate name="G$0" symbol="NEXPERIA_PESD12VL1BA,115_0_0" x="0"/>
+                    </gates>
+                    <devices>
+                        <device name="NEXPERIA_PESD12VL1BA,115_0_0" package="NEXPERIA_PESD12VL1BA,115_0">
+                            <connects>
+                                <connect gate="G$0" pad="1" pin="CATHODE_1"/>
+                                <connect gate="G$0" pad="2" pin="CATHODE_2"/>
+                            </connects>
+                            <technologies>
+                                <technology>
+                                    <attribute name="mouser_part_number" value="771-PESD12VL1BA-T/R"/>
+                                    <attribute name="mouser_description" value="PESDxL1BA series - Low capacitance bidirectional ESD protection diodes in SOD323"/>
+                                    <attribute name="ambient_temperature_range_low" value="-65°C"/>
+                                    <attribute name="breakdown_voltage" value="15.9V"/>
+                                    <attribute name="mfg_package_ident_rev" value="0"/>
+                                    <attribute name="mfg_package_ident_date" value="04/2018"/>
+                                    <attribute name="ambient_temperature_range_high" value="+150°C"/>
+                                    <attribute name="device_class_L3" value="unset"/>
+                                    <attribute name="device_class_L1" value="Circuit Protection"/>
+                                    <attribute name="digikey_part_number" value="1727-3808-1-ND"/>
+                                    <attribute name="prefix" value="D"/>
+                                    <attribute name="verification_version" value="0.0.0.1"/>
+                                    <attribute name="clamping_voltage" value="37V"/>
+                                    <attribute name="datasheet" value="https://assets.nexperia.com/documents/data-sheet/PESDXL1BA_SER.pdf"/>
+                                    <attribute name="footprint_url" value="https://assets.nexperia.com/documents/outline-drawing/SOD323.pdf"/>
+                                    <attribute name="MPN" value="PESD12VL1BA,115"/>
+                                    <attribute name="lead_free" value="yes"/>
+                                    <attribute name="height" value="1.1mm"/>
+                                    <attribute name="mfg_package_ident" value="SOD323"/>
+                                    <attribute name="peak_pulse_current" value="5A"/>
+                                    <attribute name="digikey_description" value="DIODE TVS DIODE 12V 37V SOD323"/>
+                                    <attribute name="rohs" value="yes"/>
+                                    <attribute name="centroid_not_specified" value="No"/>
+                                    <attribute name="device_class_L2" value="TVS Diodes"/>
+                                    <attribute name="reverse_standoff_voltage" value="12V"/>
+                                    <attribute name="standoff_height" value="0mm"/>
+                                    <attribute name="max_junction_temp" value="+150°C"/>
+                                    <attribute name="MF" value="Nexperia"/>
+                                    <attribute name="package" value="SOD323"/>
+                                </technology>
+                            </technologies>
+                        </device>
+                    </devices>
+                </deviceset>
+            </devicesets>
+        </library>
+    </drawing>
+</eagle>
