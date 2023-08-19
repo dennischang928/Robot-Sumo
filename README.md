@@ -8,7 +8,7 @@
 
 (I * V)*2 + 1 
 
-where I is the current of one motor with the highest Efficiency
+where I and V are the current and voltage of a motor at the highest efficiency
 
 - I = 1.5A
 - V = 12v
@@ -26,16 +26,35 @@ Desired balancing current
     - With a balancing current of 10mA (internal cell balancing by bq40z80)
       - The cell can be balanced in 1.8 hour
 
-### Cell balancer and  gauges
+### Cell balancer and gauges
 
 - Gauges with integrated balancer: Bq40z80
 
-### Charger
+## MotherBoard Design
 
-- bq2417x
+- Low-level hardware control MCU: STM32f103c8t6
+  - also could be used to run an onboard algorithm
+- **Customized Sensor module: SPI Simplex mode Communication**
+  - **3V3 powered**
+  - 3V3 **MISO** SCK GND (undirectional)
+  - data flow: slave(sensor brd) to master(mother brd) only
+- **Motor Port: I2C Communicaation**
+  - **12V powered**
+  - **VCC SDA SCL GND (Port)**
+- **Edge Sensor**
+  - **3V3 powered**
+  - **Signal GND VCC *4**
+- **12V power port for charging or powering**
+- Battery: SMBus Communication
+  - **12V battery pack power supply**
+  - SMBC SMBD
+    - Remaining fuel
+    - Battery state (Temp. Storage... etc)
+- **12V->5V->3V3**
+  - **12V -> 5V**
+    - **LM2596-5V buck converter**
 
-#### USB Power Delivery Controller (Sink)
+  - **5V -> 3V3**
+    - **RT9193-33 LDO**
 
-- 
-
-​		
+- NRF24

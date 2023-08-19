@@ -1,0 +1,15 @@
+{
+    "workbench.colorCustomizations": {
+        "minimap.background": "#00000000",
+        "scrollbar.shadow": "#00000000"
+    },
+    "files.associations": {
+        "main.h": "c",
+        "vl53l1x_api.h": "c",
+        "vl53l1_platform.h": "c",
+        "stm32xxx_hal.h": "c",
+        "stm32f1xx_hal.h": "c",
+        "cstdio": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}

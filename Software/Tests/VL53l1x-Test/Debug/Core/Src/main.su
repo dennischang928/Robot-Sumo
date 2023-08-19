@@ -1,0 +1,13 @@
+../Core/Src/main.c:70:6:EnableSensor	16	static
+../Core/Src/main.c:75:6:DisableSensor	16	static
+../Core/Src/main.c:80:9:_write	24	static
+../Core/Src/main.c:86:6:GetMeasurements	40	static
+../Core/Src/main.c:101:6:SetDeviceAddress	40	static
+../Core/Src/main.c:107:6:InitSensor	48	static
+../Core/Src/main.c:148:7:InitAllSensors2Ranging	40	static
+../Core/Src/main.c:145:5:main	40	static
+../Core/Src/main.c:219:6:SystemClock_Config	72	static
+../Core/Src/main.c:258:13:MX_I2C2_Init	8	static
+../Core/Src/main.c:291:13:MX_USART1_UART_Init	8	static
+../Core/Src/main.c:323:13:MX_GPIO_Init	40	static
+../Core/Src/main.c:362:6:Error_Handler	4	static,ignoring_inline_asm

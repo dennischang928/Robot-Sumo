@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;VL53l1x-Test/Drivers/API&apos; to &apos;VL53l1x&apos;" description="Rename resource &apos;API&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Drivers/API" name="VL53l1x" stamp="1690789421376" updateReferences="true"/>
+</session>
