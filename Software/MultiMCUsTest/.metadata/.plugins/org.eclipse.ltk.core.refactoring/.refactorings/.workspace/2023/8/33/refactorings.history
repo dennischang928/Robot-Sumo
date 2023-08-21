@@ -1,4 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;MotherBrd_Rx&apos;" deleteContents="false" description="Delete resource &apos;MotherBrd_Rx&apos;" element1="/MotherBrd_Rx" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1692340065709"/>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;MotherBrd_Rx&apos;" deleteContents="false" description="Delete resource &apos;MotherBrd_Rx&apos;" element1="/MotherBrd_Rx" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1692340065709"/>&#x0A;<refactoring comment="Rename resource &apos;CANrx&apos; to &apos;CANRx&apos;" description="Rename resource &apos;CANrx&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/CANrx" name="CANRx" stamp="1692417839351" updateReferences="true"/>
 </session>

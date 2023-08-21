@@ -1,0 +1,38 @@
+14:18:41 **** Incremental Build of configuration Debug for project CANRx ****
+make -j11 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:121:45: warning: passing argument 3 of 'HAL_CAN_GetRxMessage' from incompatible pointer type [-Wincompatible-pointer-types]
+  121 |   HAL_CAN_GetRxMessage(&hcan, CAN_RX_FIFO0, &RxHeader, RxData);
+      |                                             ^~~~~~~~~
+      |                                             |
+      |                                             CAN_TxHeaderTypeDef *
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:258,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can.h:691:61: note: expected 'CAN_RxHeaderTypeDef *' but argument is of type 'CAN_TxHeaderTypeDef *'
+  691 |                                        CAN_RxHeaderTypeDef *pHeader, uint8_t aData[]);
+      |                                        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+../Core/Src/main.c:122:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  122 |   printf("DataRecieved: %x\n\r", RxData[0]);
+      |   ^~~~~~
+../Core/Src/main.c:122:3: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:21:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   20 | #include "main.h"
+  +++ |+#include <stdio.h>
+   21 | 
+arm-none-eabi-gcc -o "CANRx.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/changdennis/Drive/Engineering/Projects/Robot-Sumo/Software/MultiMCUsTest/CANRx/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CANRx.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CANRx.elf
+ 
+arm-none-eabi-size   CANRx.elf 
+arm-none-eabi-objdump -h -S  CANRx.elf  > "CANRx.list"
+   text	   data	    bss	    dec	    hex	filename
+  12740	    120	   1736	  14596	   3904	CANRx.elf
+Finished building: default.size.stdout
+ 
+Finished building: CANRx.list
+ 
+
+14:18:42 Build Finished. 0 errors, 3 warnings. (took 1s.349ms)
+
