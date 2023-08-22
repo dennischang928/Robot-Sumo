@@ -67,11 +67,11 @@ int	_write(int file, char *data, int len)
 
 void	HAL_I2C_SlaveRxCpltCallback(I2C_HandleTypeDef *hi2c)
 {
-	// printf("DataReceived: ");
-	// for (int i = 0; i < 10; i++)
-	// {
-	printf("%d ", RX_Buffer[0]);
-	// }
+	printf("DataReceived: ");
+	for (int i = 0; i < 10; i++)
+	{
+		printf("%d, ", RX_Buffer[i]);
+	}
 	printf("\n\r");
 }
 /* USER CODE END PFP */

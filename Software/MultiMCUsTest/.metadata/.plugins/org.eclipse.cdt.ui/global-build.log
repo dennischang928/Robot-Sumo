@@ -3932,3 +3932,63 @@ Finished building: default.size.stdout
  
 Finished building: I2CRx.list
  
+17:48:31 **** Incremental Build of configuration Debug for project I2CRx ****
+make -j11 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_I2C_SlaveRxCpltCallback':
+../Core/Src/main.c:73:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   73 |  printf("Received: %d %d %d %d %d %d %d %d %d %d ", RX_Buffer[0],
+      |  ^~~~~~
+../Core/Src/main.c:73:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:21:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   20 | #include "main.h"
+  +++ |+#include <stdio.h>
+   21 | 
+arm-none-eabi-gcc -o "I2CRx.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/changdennis/Drive/Engineering/Projects/Robot-Sumo/Software/MultiMCUsTest/I2CRx/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="I2CRx.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: I2CRx.elf
+ 
+arm-none-eabi-size   I2CRx.elf 
+arm-none-eabi-objdump -h -S  I2CRx.elf  > "I2CRx.list"
+   text	   data	    bss	    dec	    hex	filename
+  17732	    120	   1760	  19612	   4c9c	I2CRx.elf
+Finished building: default.size.stdout
+ 
+Finished building: I2CRx.list
+ 
+17:49:39 **** Incremental Build of configuration Debug for project I2CRx ****
+make -j11 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_I2C_SlaveRxCpltCallback':
+../Core/Src/main.c:70:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   70 |  printf("DataReceived: ");
+      |  ^~~~~~
+../Core/Src/main.c:70:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:21:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   20 | #include "main.h"
+  +++ |+#include <stdio.h>
+   21 | 
+arm-none-eabi-gcc -o "I2CRx.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/changdennis/Drive/Engineering/Projects/Robot-Sumo/Software/MultiMCUsTest/I2CRx/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="I2CRx.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: I2CRx.elf
+ 
+arm-none-eabi-size   I2CRx.elf 
+arm-none-eabi-objdump -h -S  I2CRx.elf  > "I2CRx.list"
+   text	   data	    bss	    dec	    hex	filename
+  17668	    120	   1760	  19548	   4c5c	I2CRx.elf
+Finished building: default.size.stdout
+ 
+Finished building: I2CRx.list
+ 
+17:49:54 **** Incremental Build of configuration Debug for project I2CTx ****
+make -j11 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "I2CTx.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/changdennis/Drive/Engineering/Projects/Robot-Sumo/Software/MultiMCUsTest/I2CTx/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="I2CTx.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: I2CTx.elf
+ 
+arm-none-eabi-size   I2CTx.elf 
+arm-none-eabi-objdump -h -S  I2CTx.elf  > "I2CTx.list"
+   text	   data	    bss	    dec	    hex	filename
+  14420	     32	   1656	  16108	   3eec	I2CTx.elf
+Finished building: default.size.stdout
+ 
+Finished building: I2CTx.list
+ 

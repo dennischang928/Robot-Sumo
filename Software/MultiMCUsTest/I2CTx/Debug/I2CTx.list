@@ -174,10 +174,10 @@ int	main(void)
  80001bc:	603b      	str	r3, [r7, #0]
  80001be:	e012      	b.n	80001e6 <main+0x9a>
 		{
-			HAL_Delay(1);
- 80001c0:	2001      	movs	r0, #1
+			HAL_Delay(10);
+ 80001c0:	200a      	movs	r0, #10
  80001c2:	f000 fa07 	bl	80005d4 <HAL_Delay>
-			TX_Buffer[0] = i; 
+			TX_Buffer[0] = i;
  80001c6:	683b      	ldr	r3, [r7, #0]
  80001c8:	b2da      	uxtb	r2, r3
  80001ca:	4b0b      	ldr	r3, [pc, #44]	; (80001f8 <main+0xac>)

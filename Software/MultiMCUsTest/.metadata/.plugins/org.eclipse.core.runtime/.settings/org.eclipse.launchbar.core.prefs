@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=macosx
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:I2CTx Debug (1),org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SensorBrdTx Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MotherBrdRx Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CANTx Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:I2CTx Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CANRx Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:I2CRx Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:I2CTx Debug (1),org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SensorBrdTx Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MotherBrdRx Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CANTx Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CANRx Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:I2CRx Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:I2CTx Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CANRx\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CANRx\ Debug/activeLaunchTarget=null\:---
