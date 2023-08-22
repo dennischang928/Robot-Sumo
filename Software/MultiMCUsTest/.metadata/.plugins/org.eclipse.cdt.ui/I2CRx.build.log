@@ -1,0 +1,26 @@
+16:18:24 **** Incremental Build of configuration Debug for project I2CRx ****
+make -j11 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_I2C_SlaveRxCpltCallback':
+../Core/Src/main.c:73:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   73 |  printf("%d ", RX_Buffer[0]);
+      |  ^~~~~~
+../Core/Src/main.c:73:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:21:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   20 | #include "main.h"
+  +++ |+#include <stdio.h>
+   21 | 
+arm-none-eabi-gcc -o "I2CRx.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/changdennis/Drive/Engineering/Projects/Robot-Sumo/Software/MultiMCUsTest/I2CRx/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="I2CRx.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: I2CRx.elf
+ 
+arm-none-eabi-size   I2CRx.elf 
+arm-none-eabi-objdump -h -S  I2CRx.elf  > "I2CRx.list"
+   text	   data	    bss	    dec	    hex	filename
+  17616	    120	   1760	  19496	   4c28	I2CRx.elf
+Finished building: default.size.stdout
+ 
+Finished building: I2CRx.list
+ 
+
+16:18:25 Build Finished. 0 errors, 2 warnings. (took 733ms)
+

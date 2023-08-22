@@ -1,12 +1,16 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=macosx
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SensorBrdTx Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MotherBrdRx Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CANTx Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CANRx Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:I2CTx Debug (1),org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SensorBrdTx Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MotherBrdRx Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CANTx Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:I2CTx Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CANRx Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:I2CRx Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CANRx\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CANRx\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:I2CRx\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:I2CTx\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MotherBrdRx\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MotherBrdRx\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SensorBrdTx\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SensorBrdTx\ Debug/activeLaunchTarget=null\:---
+org.eclipse.launchbar.core.descriptorType.default\:I2CRx\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:I2CTx\ Debug\ (1)/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:SensorBrdTx\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
