@@ -34,10 +34,11 @@ Desired balancing current
 
 - Low-level hardware control MCU: STM32f103c8t6
   - also could be used to run an onboard algorithm
-- **Customized Sensor module: SPI Simplex mode Communication**
-  - **3V3 powered**
-  - 3V3 **MISO** SCK GND (undirectional)
-  - data flow: slave(sensor brd) to master(mother brd) only
+- **Customized Sensor module: I2C Fast Mode Communication**
+  - 400kbits/s
+  - 3V3 powered
+  - 3V3 SDA SCL GND 
+  - data flow: slave(sensor brd) to master(mother brd) **only**
 - **Motor Port: I2C Communicaation**
   - **12V powered**
   - **VCC SDA SCL GND (Port)**
