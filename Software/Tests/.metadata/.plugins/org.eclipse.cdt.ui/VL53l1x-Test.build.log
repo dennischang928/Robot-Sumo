@@ -1,10 +1,21 @@
-15:30:32 **** Incremental Build of configuration Debug for project VL53l1x-Test ****
+18:04:49 **** Incremental Build of configuration Debug for project VL53l1x-Test ****
 make -j11 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I"/Users/changdennis/Drive/Engineering/Projects/Robot-Sumo/Software/Tests/VL53l1x-Test/Drivers/BSP" -I"/Users/changdennis/Drive/Engineering/Projects/Robot-Sumo/Software/Tests/VL53l1x-Test/Core" -I"/Users/changdennis/Drive/Engineering/Projects/Robot-Sumo/Software/Tests/VL53l1x-Test/Drivers/BSP/Components/vl53l1x_uld" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:52:50: warning: excess elements in array initializer
+   52 | uint8_t  DevicesAddresses[SensorNumber] = {0x50, 0x02};
+      |                                                  ^~~~
+../Core/Src/main.c:52:50: note: (near initialization for 'DevicesAddresses')
+arm-none-eabi-gcc -o "VL53l1x-Test.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/changdennis/Drive/Engineering/Projects/Robot-Sumo/Software/Tests/VL53l1x-Test/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="VL53l1x-Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: VL53l1x-Test.elf
+ 
 arm-none-eabi-size   VL53l1x-Test.elf 
+arm-none-eabi-objdump -h -S  VL53l1x-Test.elf  > "VL53l1x-Test.list"
    text	   data	    bss	    dec	    hex	filename
-  18592	    124	   2060	  20776	   5128	VL53l1x-Test.elf
+  18576	    124	   2036	  20736	   5100	VL53l1x-Test.elf
 Finished building: default.size.stdout
  
+Finished building: VL53l1x-Test.list
+ 
 
-15:30:32 Build Finished. 0 errors, 0 warnings. (took 389ms)
+18:04:52 Build Finished. 0 errors, 1 warnings. (took 2s.747ms)
 

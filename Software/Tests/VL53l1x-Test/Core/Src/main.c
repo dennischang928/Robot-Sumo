@@ -33,6 +33,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define SensorNumber 1
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -41,15 +42,14 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-#define SensorNumber 2
-
 I2C_HandleTypeDef hi2c2;
+
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
 
 VL53L1_Dev_t devs[SensorNumber];
-uint8_t		DevicesAddresses[SensorNumber] = {0x00, 0x02};
+uint8_t		DevicesAddresses[SensorNumber] = {0x50, 0x02};
 int			status = 0;
 
 uint8_t		sensorState = 0;
@@ -129,7 +129,7 @@ void	InitSensor(VL53L1_Dev_t *device, uint8_t AddressToAssign)
 	printf("Chip booted\n\r");
 
 	status = VL53L1X_SetDistanceMode(*device, 1); /* 1=short, 2=long */
-	status = VL53L1X_SetROI(*device, 5, 5);       /* minimum ROI 4,4 */
+	status = VL53L1X_SetROI(*device, 4, 5);       /* minimum ROI 4,4 */
 }
 
 /* USER CODE END PFP */
@@ -140,9 +140,9 @@ void	InitSensor(VL53L1_Dev_t *device, uint8_t AddressToAssign)
 /* USER CODE END 0 */
 
 /**
- * @brief  The application entry point.
- * @retval int
- */
+  * @brief  The application entry point.
+  * @retval int
+  */
 int	main(void)
 {
 	/* USER CODE BEGIN 1 */
@@ -176,11 +176,11 @@ int	main(void)
 		devs[i].I2cDevAddr = 0x52;
 	}
 
-	devs[0].XSHUT_GPIO = Dev1_GPIO_Port;
-	devs[1].XSHUT_GPIO = Dev2_GPIO_Port;
+	devs[0].XSHUT_GPIO = Dev2_GPIO_Port;
+	// devs[1].XSHUT_GPIO = Dev2_GPIO_Port;
 
-	devs[0].XSHUT_PIN = Dev1_Pin;
-	devs[1].XSHUT_PIN = Dev2_Pin;
+	devs[0].XSHUT_PIN = Dev2_Pin;
+	// devs[1].XSHUT_PIN = Dev2_Pin;
 	/* USER CODE END Init */
 
 	/* Configure the system clock */
@@ -205,27 +205,29 @@ int	main(void)
 	while (1)
 	{
 		/* USER CODE END WHILE */
+
 		/* USER CODE BEGIN 3 */
 		status = VL53L1X_GetDistance(devs[0], &Distance);
-		printf("Dev0: %u, ", Distance);
-		status = VL53L1X_GetDistance(devs[1], &Distance);
-		printf("Dev1: %u\n\r", Distance);
+		printf("Dev0: %u, ", Distance );
+		// status = VL53L1X_GetDistance(devs[1], &Distance);
+		// printf("Dev1: %u", Distance);
+		printf("\n\r");
 	}
 	/* USER CODE END 3 */
 }
 
 /**
- * @brief System Clock Configuration
- * @retval None
- */
+  * @brief System Clock Configuration
+  * @retval None
+  */
 void	SystemClock_Config(void)
 {
 	RCC_OscInitTypeDef RCC_OscInitStruct = {0};
 	RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
 	/** Initializes the RCC Oscillators according to the specified parameters
-		* in the RCC_OscInitTypeDef structure.
-		*/
+  * in the RCC_OscInitTypeDef structure.
+  */
 	RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
 	RCC_OscInitStruct.HSEState = RCC_HSE_ON;
 	RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
@@ -239,7 +241,7 @@ void	SystemClock_Config(void)
 	}
 
 	/** Initializes the CPU, AHB and APB buses clocks
-		*/
+  */
 	RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
 	RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
 	RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
@@ -253,10 +255,10 @@ void	SystemClock_Config(void)
 }
 
 /**
- * @brief I2C2 Initialization Function
- * @param None
- * @retval None
- */
+  * @brief I2C2 Initialization Function
+  * @param None
+  * @retval None
+  */
 static void	MX_I2C2_Init(void)
 {
 	/* USER CODE BEGIN I2C2_Init 0 */
@@ -285,10 +287,10 @@ static void	MX_I2C2_Init(void)
 }
 
 /**
- * @brief USART1 Initialization Function
- * @param None
- * @retval None
- */
+  * @brief USART1 Initialization Function
+  * @param None
+  * @retval None
+  */
 static void	MX_USART1_UART_Init(void)
 {
 	/* USER CODE BEGIN USART1_Init 0 */
@@ -316,10 +318,10 @@ static void	MX_USART1_UART_Init(void)
 }
 
 /**
- * @brief GPIO Initialization Function
- * @param None
- * @retval None
- */
+  * @brief GPIO Initialization Function
+  * @param None
+  * @retval None
+  */
 static void	MX_GPIO_Init(void)
 {
 	GPIO_InitTypeDef GPIO_InitStruct = {0};
@@ -334,7 +336,10 @@ static void	MX_GPIO_Init(void)
 	HAL_GPIO_WritePin(LED_PIN_GPIO_Port, LED_PIN_Pin, GPIO_PIN_RESET);
 
 	/*Configure GPIO pin Output Level */
-	HAL_GPIO_WritePin(GPIOB, Dev1_Pin | Dev2_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(Dev1_GPIO_Port, Dev1_Pin, GPIO_PIN_RESET);
+
+	/*Configure GPIO pin Output Level */
+	HAL_GPIO_WritePin(Dev2_GPIO_Port, Dev2_Pin, GPIO_PIN_RESET);
 
 	/*Configure GPIO pin : LED_PIN_Pin */
 	GPIO_InitStruct.Pin = LED_PIN_Pin;
@@ -343,12 +348,19 @@ static void	MX_GPIO_Init(void)
 	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 	HAL_GPIO_Init(LED_PIN_GPIO_Port, &GPIO_InitStruct);
 
-	/*Configure GPIO pins : Dev1_Pin Dev2_Pin */
-	GPIO_InitStruct.Pin = Dev1_Pin | Dev2_Pin;
+	/*Configure GPIO pin : Dev1_Pin */
+	GPIO_InitStruct.Pin = Dev1_Pin;
 	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
 	GPIO_InitStruct.Pull = GPIO_NOPULL;
 	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-	HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+	HAL_GPIO_Init(Dev1_GPIO_Port, &GPIO_InitStruct);
+
+	/*Configure GPIO pin : Dev2_Pin */
+	GPIO_InitStruct.Pin = Dev2_Pin;
+	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	HAL_GPIO_Init(Dev2_GPIO_Port, &GPIO_InitStruct);
 }
 
 /* USER CODE BEGIN 4 */
@@ -356,9 +368,9 @@ static void	MX_GPIO_Init(void)
 /* USER CODE END 4 */
 
 /**
- * @brief  This function is executed in case of error occurrence.
- * @retval None
- */
+  * @brief  This function is executed in case of error occurrence.
+  * @retval None
+  */
 void	Error_Handler(void)
 {
 	/* USER CODE BEGIN Error_Handler_Debug */
@@ -372,12 +384,12 @@ void	Error_Handler(void)
 
 #ifdef USE_FULL_ASSERT
 /**
- * @brief  Reports the name of the source file and the source line number
- *         where the assert_param error has occurred.
- * @param  file: pointer to the source file name
- * @param  line: assert_param error line source number
- * @retval None
- */
+  * @brief  Reports the name of the source file and the source line number
+  *         where the assert_param error has occurred.
+  * @param  file: pointer to the source file name
+  * @param  line: assert_param error line source number
+  * @retval None
+  */
 void	assert_failed(uint8_t *file, uint32_t line)
 {
 	/* USER CODE BEGIN 6 */
@@ -386,5 +398,4 @@ void	assert_failed(uint8_t *file, uint32_t line)
 	line) */
 	/* USER CODE END 6 */
 }
-
 #endif /* USE_FULL_ASSERT */

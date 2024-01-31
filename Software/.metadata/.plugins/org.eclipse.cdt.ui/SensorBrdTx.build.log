@@ -1,0 +1,10 @@
+10:45:53 **** Incremental Build of configuration Debug for project SensorBrdTx ****
+make -j9 all 
+arm-none-eabi-size   SensorBrdTx.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6736	     20	   1732	   8488	   2128	SensorBrdTx.elf
+Finished building: default.size.stdout
+ 
+
+10:45:53 Build Finished. 0 errors, 0 warnings. (took 368ms)
+

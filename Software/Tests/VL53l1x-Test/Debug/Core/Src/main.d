@@ -23,7 +23,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
- /Users/changdennis/Drive/Engineering/Projects/Robot-Sumo/Software/Tests/VL53l1x-Test/Drivers/BSP/Components/vl53l1x_uld/VL53L1X_api.h \
+ /Users/dennischang/My\ Drive/Engineering/Projects/Robot-Sumo/Software/Tests/VL53l1x-Test/Drivers/BSP/Components/vl53l1x_uld/VL53L1X_api.h \
  ../Core/Inc/vl53l1_platform.h ../Core/Inc/vl53l1_error_codes.h \
  ../Core/Inc/vl53l1_types.h ../Core/Inc/vl53l1_platform_log.h
 ../Core/Inc/main.h:
@@ -51,7 +51,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
-/Users/changdennis/Drive/Engineering/Projects/Robot-Sumo/Software/Tests/VL53l1x-Test/Drivers/BSP/Components/vl53l1x_uld/VL53L1X_api.h:
+/Users/dennischang/My\ Drive/Engineering/Projects/Robot-Sumo/Software/Tests/VL53l1x-Test/Drivers/BSP/Components/vl53l1x_uld/VL53L1X_api.h:
 ../Core/Inc/vl53l1_platform.h:
 ../Core/Inc/vl53l1_error_codes.h:
 ../Core/Inc/vl53l1_types.h:

@@ -1,0 +1,24 @@
+18:14:12 **** Incremental Build of configuration Debug for project SensorBrdCode ****
+make -j11 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I"/Users/changdennis/Drive/Engineering/Projects/Robot-Sumo/Software/SensorBrdCode/Drivers/BSP/Components/vl53l1x_uld" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'InitSensor':
+../Core/Src/main.c:119:19: warning: unknown conversion type character 'r' in format [-Wformat=]
+  119 |  printf("Status: %r\n\r", status);
+      |                   ^
+../Core/Src/main.c:119:9: warning: too many arguments for format [-Wformat-extra-args]
+  119 |  printf("Status: %r\n\r", status);
+      |         ^~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "SensorBrdCode.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/changdennis/Drive/Engineering/Projects/Robot-Sumo/Software/SensorBrdCode/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SensorBrdCode.map" -Wl,--gc-sections -static -L/Users/changdennis/Drive/Engineering/Projects/Robot-Sumo/Software/SensorBrdCode/Core/Inc --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SensorBrdCode.elf
+ 
+arm-none-eabi-size   SensorBrdCode.elf 
+arm-none-eabi-objdump -h -S  SensorBrdCode.elf  > "SensorBrdCode.list"
+   text	   data	    bss	    dec	    hex	filename
+  18564	    124	   2084	  20772	   5124	SensorBrdCode.elf
+Finished building: default.size.stdout
+ 
+Finished building: SensorBrdCode.list
+ 
+
+18:14:13 Build Finished. 0 errors, 2 warnings. (took 587ms)
+
